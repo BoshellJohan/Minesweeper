@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Buscaminas</h1>
+    </header>
+
+    <div class="game-container">
+        <div class="board"></div>
+    </div>
+
+    <p class="message"></p>
+
+    <div class="options-container">
+        <div class="options">
+            <p>Remaining flags: <span id="count-flags" count="0">20</span></p>
+            <p>Temporizador: <span id="time">0</span>s</p>
+            <div class="btn-container">
+                <select id="difficulty" title="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button type="button" id="reset-btn" title="reset"><img src="./images/refresh.svg" alt=""/></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="main.js" type="module"></script>
+</html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: "Big Shoulders", serif;
+}
+
+header > h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-top: -1rem;
+}
+
+.game-container{
+    width: auto;
+    height: auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.game-container > .board {
+    border: 2px solid green;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    display: grid;
+    width: auto;
+    /* grid-template-columns: repeat(10, 1fr); */
+}
+
+.board > button{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+
+    /* border: 1px solid black;
+    background-color: grey; */
+}
+
+
+.board > button:disabled {
+    cursor: auto;
+}
+
+/*Message*/
+.message {
+    text-transform: capitalize;
+    padding: 0.4rem 2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.6rem;
+    display: none;
+    /* transition: all 1s ease-in-out; */
+}
+
+.message.success {
+    background-color: rgb(134, 246, 103);
+}
+
+.message.failed {
+    background-color: rgb(246, 103, 103);
+}
+
+
+/*Contenedor de los botones y la informacion*/
+.options-container{
+    width: auto;
+    background-color: rgb(148, 215, 97);
+    border: 2px solid green;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.options-container > .options {
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+
+
+.options > p{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+
+.options > .btn-container {
+    display: flex;
+    gap: 0.4rem;
+    flex-flow: row wrap;
+}
+
+.btn-container > button{
+    all: unset;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    background-color: #c5ea85;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.btn-container > select {
+    border-style: none;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    background-color: #c5ea85;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: "Big Shoulders";
+}
+
+.btn-container > :is(button:hover, button:focus){
+    cursor: pointer;
+    background-color: #bde07f;
+}
+
+.btn-container > button > img {
+    margin-top: 0.2rem;
+}
+
+.board > .mine {
+    background-color: red;
+}
+
